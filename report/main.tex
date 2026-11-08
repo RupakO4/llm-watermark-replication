@@ -9,6 +9,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{adjustbox}
+\usepackage{float}
 \usepackage{amsmath}
 \usepackage{xcolor}
 \usepackage{tikz}
@@ -285,7 +286,7 @@ The judge's chat template is applied and the next-token probabilities of ``1''--
 
 \section{Investigating the $\gamma{=}0.5,\delta{=}1$ Gap}
 \label{app:gap}
-\begin{table}[h]
+\begin{table}[H]
 \centering\small
 \fittab{gap_table}
 \caption{Testing explanations for the replication gap, on the \V{rep.n} C4 prompts. Entropy thirds split prompts by the generator's mean spike entropy $S$ (OPT-1.3B, measured along the unwatermarked continuation). ``green frac.'' is the share of green tokens among tokens 1--100 and 101--200. The last column is the TPR a logistic fit of detection on $S$ predicts at the paper's mean $S{=}0.807$ (paper's TPR in brackets).}
@@ -301,12 +302,13 @@ We tested the two protocol changes that could lower the watermark's strength at 
 
 \section{Additional Results}
 \label{app:extra}
-\begin{table}[h]
+All per-text scores, the settings of every stage and the exact software environment are released with the code. The analysis script \code{src/analysis.py} regenerates every table, figure and number in this report from them.
+
+\begin{table}[H]
 \centering\small
 \fittab{robust_table}
 \caption{Every edit attack at $\gamma{=}0.5,\delta{=}2$ (OPT-1.3B). ``edited'' is the realised fraction of words changed. TPR uses $z>4$.}
 \label{tab:robust}
 \end{table}
-All per-text scores, the settings of every stage and the exact software environment are released with the code. The analysis script \code{src/analysis.py} regenerates every table, figure and number in this report from them.
 
 \end{document}
