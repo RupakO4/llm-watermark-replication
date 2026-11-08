@@ -1,0 +1,13 @@
+{
+  "experiment": "multidomain_qwen",
+  "prompts": "data/prompts_multidomain_qwen.csv",
+  "oracle": "Qwen/Qwen2.5-3B",
+  "generator": "Qwen/Qwen2.5-1.5B",
+  "gamma": 0.5,
+  "delta": 2.0,
+  "temperature": 0.7,
+  "device": "auto",
+  "dtype": "auto",
+  "no_attacks": false,
+  "skip_entropy": true
+}

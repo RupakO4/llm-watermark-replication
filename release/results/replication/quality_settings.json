@@ -1,0 +1,13 @@
+{
+  "experiment": "replication",
+  "prompts": "data/prompts_replication.csv",
+  "oracle": "facebook/opt-2.7b",
+  "generator": "facebook/opt-1.3b",
+  "gamma": 0.5,
+  "delta": 2.0,
+  "temperature": 0.7,
+  "device": "auto",
+  "dtype": "auto",
+  "no_attacks": false,
+  "skip_entropy": true
+}

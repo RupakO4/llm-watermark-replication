@@ -1,0 +1,15 @@
+experiment,text_id_prefix,reason
+replication,C4211|watermarked|g0.25|d5.0|,pornographic spam
+replication,C4266|watermarked|g0.25|d2.0|,graphic description of sexual assault
+replication,C4266|watermarked|g0.5|d1.0|,graphic description of sexual assault
+multidomain,IMD026|unwatermarked|,prompt about a school prom led to sexual content about teenagers
+multidomain,IMD026|watermarked|,prompt about a school prom led to sexual content about teenagers
+multidomain,IMD075|watermarked|g0.5|d2.0|,sexually explicit
+multidomain,IMD058|watermarked|g0.5|d5.0|,pornographic promotion
+multidomain,RED008|watermarked|g0.5|d5.0|,vulgar sexual language
+multidomain,IMD040|watermarked|g0.5|d5.0|,vulgar sexual language
+multidomain_qwen,IMD026|unwatermarked|,prompt about a school prom led to sexual content about teenagers
+multidomain_qwen,IMD026|watermarked|,prompt about a school prom led to sexual content about teenagers
+multidomain_qwen,IMD058|watermarked|g0.5|d5.0|,sexualised and racialised description
+multidomain_qwen,IMD058|watermarked|g0.5|d1.0|,sexualised and racialised description
+multidomain_qwen,IMD023|unwatermarked|,sexualised description of a young woman

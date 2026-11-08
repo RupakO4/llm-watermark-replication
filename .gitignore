@@ -1,0 +1,49 @@
+third_party/
+data/cache/
+results/smoke_*/
+results/logs/smoke_*
+results/t_*/
+data/prompts_t_*
+data/prompts_smoke_*
+annotation/key.csv.bak
+__pycache__/
+*.pyc
+.DS_Store
+.idea/
+report/*.aux
+report/*.log
+report/*.out
+report/*.bbl
+report/*.blg
+report/*.synctex.gz
+report/*.fdb_latexmk
+report/*.fls
+
+# Raw prompts and results contain CC-News, IMDb and Amazon text, whose licences do not allow
+# redistribution. The public, redacted copy is release/ (python src/make_release.py).
+data/prompts_*.csv
+data/ratings_author.csv
+results/replication/
+results/multidomain/
+results/logs/
+annotation/items_blind.csv
+annotation/annotate.html
+
+# launcher control files
+GO_FULL
+SMOKE_AGAIN
+STOP
+ABORT
+
+# outputs of `analysis.py --root release`
+release/results/tables/
+release/results/figures/
+release/results/summary.json
+
+# v2: raw outputs of the GPU runs and the private copy of the 60 rated pilot texts
+results/multidomain_qwen/
+results/v1_items/
+v2_results/
+judge_check_results/
+embed/
+notebook/judge_check.ipynb

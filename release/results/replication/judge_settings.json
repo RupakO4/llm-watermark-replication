@@ -1,0 +1,10 @@
+{
+  "experiment": "replication",
+  "prompts": "data/prompts_replication.csv",
+  "judge": "Qwen/Qwen2.5-3B-Instruct",
+  "deltas": null,
+  "gamma": 0.5,
+  "device": "auto",
+  "dtype": "auto",
+  "rubric": "You are grading the quality of a text continuation.\n\nBelow is the BEGINNING of a document, followed by a CONTINUATION. Rate only the CONTINUATION, on this scale:\n1 = very poor: garbled, mostly repetition loops, or unrelated to the beginning\n2 = poor: frequent errors or repetition, hard to follow\n3 = fair: understandable but with noticeable problems (some repetition, odd or off-topic sentences)\n4 = good: fluent and coherent, with minor issues\n5 = excellent: fluent, coherent, consistent with the beginning, as good as skilled human writing\n\nConsider fluency, coherence with the beginning, and repetitiveness. Do not judge factual accuracy, and do not reward or penalise style or topic. The texts may stop mid-sentence; that is expected.\n\nBEGINNING:\n\"\"\"{prompt}\"\"\"\n\nCONTINUATION:\n\"\"\"{continuation}\"\"\"\n\nAnswer with a single digit from 1 to 5."
+}

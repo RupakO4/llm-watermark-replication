@@ -1,0 +1,43 @@
+{
+  "settings": {
+    "set": "replication",
+    "sources": null,
+    "name": "replication",
+    "per_source": 500,
+    "prompt_tokens": 50,
+    "human_tokens": 150,
+    "replication_T": 200,
+    "min_prompt_tokens": 50,
+    "max_context": 512,
+    "tokenizer": "facebook/opt-1.3b",
+    "seed": 42,
+    "shuffle_buffer": 2000,
+    "max_scan": 4000
+  },
+  "protocol": "suffix",
+  "sources": [
+    {
+      "source": "c4",
+      "dataset": "allenai/c4",
+      "config": "realnewslike",
+      "licence": "ODC-BY 1.0 (C4); Common Crawl terms of use",
+      "domain": "news",
+      "scanned": 726,
+      "kept": 500,
+      "rejected": {
+        "too_few_tokens": 127,
+        "too_short_chars": 97,
+        "non_english_script": 1,
+        "pii_heavy": 1
+      },
+      "edits": {
+        "pii_replaced": 149
+      },
+      "median_doc_tokens": 511.0,
+      "example": {
+        "raw": "Ok, even with expedited shipping, the arrangement for my wife's birthday arrived... the next day... the day AFTER they were supposed to be delivered. I had to call them to check the status, and their only offer was to credit the before noon delivery fee. So for $68.71 what I was supposed to get, looked NOTHING like the photo on their website. Use your local florist in the future. All these types o",
+        "clean": "Ok, even with expedited shipping, the arrangement for my wife's birthday arrived... the next day... the day AFTER they were supposed to be delivered. I had to call them to check the status, and their only offer was to credit the before noon delivery fee. So for $68.71 what I was supposed to get, looked NOTHING like the photo on their website. Use your local florist in the future. All these types o"
+      }
+    }
+  ]
+}

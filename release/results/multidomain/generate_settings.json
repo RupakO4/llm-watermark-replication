@@ -1,0 +1,38 @@
+{
+  "experiment": "multidomain",
+  "prompts": "data/prompts_multidomain.csv",
+  "model": "facebook/opt-1.3b",
+  "gammas": [
+    0.5
+  ],
+  "deltas": [
+    1.0,
+    2.0,
+    5.0
+  ],
+  "attack_gamma": 0.5,
+  "attack_delta": 2.0,
+  "no_attacks": false,
+  "max_new_tokens": 150,
+  "temperature": 0.7,
+  "top_k": 0,
+  "top_p": 1.0,
+  "repetition_penalty": 1.0,
+  "no_force_length": false,
+  "model_device": "auto",
+  "dtype": "float16",
+  "batch_prompts": 16,
+  "seeding_scheme": "simple_1",
+  "z_threshold": 4.0,
+  "prefix_lengths": [
+    25,
+    50,
+    100,
+    150,
+    200
+  ],
+  "seed": 42,
+  "limit_per_source": null,
+  "no_resume": false,
+  "model_device_used": "cuda"
+}

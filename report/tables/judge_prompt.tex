@@ -1,0 +1,18 @@
+You are grading the quality of a text continuation.\\
+\smallskip
+Below is the BEGINNING of a document, followed by a CONTINUATION. Rate only the CONTINUATION, on this scale:\\
+1 = very poor: garbled, mostly repetition loops, or unrelated to the beginning\\
+2 = poor: frequent errors or repetition, hard to follow\\
+3 = fair: understandable but with noticeable problems (some repetition, odd or off-topic sentences)\\
+4 = good: fluent and coherent, with minor issues\\
+5 = excellent: fluent, coherent, consistent with the beginning, as good as skilled human writing\\
+\smallskip
+Consider fluency, coherence with the beginning, and repetitiveness. Do not judge factual accuracy, and do not reward or penalise style or topic. The texts may stop mid-sentence; that is expected.\\
+\smallskip
+BEGINNING:\\
+"""\{prompt\}"""\\
+\smallskip
+CONTINUATION:\\
+"""\{continuation\}"""\\
+\smallskip
+Answer with a single digit from 1 to 5.\\

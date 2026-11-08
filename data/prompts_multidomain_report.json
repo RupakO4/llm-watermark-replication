@@ -1,0 +1,236 @@
+{
+  "settings": {
+    "set": "multidomain",
+    "sources": null,
+    "name": "multidomain",
+    "per_source": 100,
+    "prompt_tokens": 50,
+    "human_tokens": 150,
+    "replication_T": 200,
+    "min_prompt_tokens": 50,
+    "max_context": 512,
+    "tokenizer": "facebook/opt-1.3b",
+    "seed": 42,
+    "shuffle_buffer": 2000,
+    "max_scan": 4000
+  },
+  "protocol": "prefix",
+  "sources": [
+    {
+      "source": "c4",
+      "dataset": "allenai/c4",
+      "config": "realnewslike",
+      "licence": "ODC-BY 1.0 (C4); Common Crawl terms of use",
+      "domain": "news",
+      "scanned": 136,
+      "kept": 100,
+      "rejected": {
+        "too_few_tokens": 17,
+        "too_short_chars": 19
+      },
+      "edits": {
+        "pii_replaced": 24
+      },
+      "median_doc_tokens": 629.0,
+      "example": {
+        "raw": "Ok, even with expedited shipping, the arrangement for my wife's birthday arrived... the next day... the day AFTER they were supposed to be delivered. I had to call them to check the status, and their only offer was to credit the before noon delivery fee. So for $68.71 what I was supposed to get, looked NOTHING like the photo on their website. Use your local florist in the future. All these types o",
+        "clean": "Ok, even with expedited shipping, the arrangement for my wife's birthday arrived... the next day... the day AFTER they were supposed to be delivered. I had to call them to check the status, and their only offer was to credit the before noon delivery fee. So for $68.71 what I was supposed to get, looked NOTHING like the photo on their website. Use your local florist in the future. All these types o"
+      }
+    },
+    {
+      "source": "wikipedia",
+      "dataset": "wikimedia/wikipedia",
+      "config": "20231101.en",
+      "licence": "CC BY-SA 4.0 / GFDL",
+      "domain": "encyclopedic",
+      "scanned": 175,
+      "kept": 100,
+      "rejected": {
+        "too_short_chars": 69,
+        "too_few_tokens": 6
+      },
+      "edits": {
+        "pii_replaced": 25
+      },
+      "median_doc_tokens": 517.0,
+      "example": {
+        "raw": "David Bing (born November 24, 1943) is an American former professional basketball player, businessman, and politician who served as the 74th mayor of Detroit, Michigan from 2009 to 2014. He is a member of the Democratic Party.\n\nAfter starring at Syracuse University, Bing played 12 seasons in the National Basketball Association (NBA) as a point guard for the Detroit Pistons (1966–1975), Washington ",
+        "clean": "David Bing (born November 24, 1943) is an American former professional basketball player, businessman, and politician who served as the 74th mayor of Detroit, Michigan from 2009 to 2014. He is a member of the Democratic Party.\n\nAfter starring at Syracuse University, Bing played 12 seasons in the National Basketball Association (NBA) as a point guard for the Detroit Pistons (1966–1975), Washington "
+      }
+    },
+    {
+      "source": "cc_news",
+      "dataset": "vblagoje/cc_news",
+      "config": null,
+      "licence": "Common Crawl terms of use; article copyright with publishers",
+      "domain": "news",
+      "scanned": 139,
+      "kept": 100,
+      "rejected": {
+        "too_few_tokens": 13,
+        "too_short_chars": 21,
+        "pii_heavy": 2,
+        "duplicate": 3
+      },
+      "edits": {
+        "pii_replaced": 177
+      },
+      "median_doc_tokens": 546.5,
+      "example": {
+        "raw": "By\nRachel Bowling 70 died Thursday\nFuneral 2 PM Sunday\nBritton Funeral Home\nBurial at Polly Marcum Cemetery (Big Creek)\nVisitation Saturday\nBritton Funeral Home\nSubscribe to the Manchester Enterprise Today!\nClick Here To Subscribe On-line\nRachel Bowling, 70, of Big Creek, KY, passed away Thursday, February 1st, at ContinueCare Hospital at Baptist Health Corbin.\nRachel was born in Saul, KY on Octob",
+        "clean": "By\nRachel Bowling 70 died Thursday\nFuneral 2 PM Sunday\nBritton Funeral Home\nBurial at Polly Marcum Cemetery (Big Creek)\nVisitation Saturday\nBritton Funeral Home\nSubscribe to the Manchester Enterprise Today!\nClick Here To Subscribe On-line\nRachel Bowling, 70, of Big Creek, KY, passed away Thursday, February 1st, at ContinueCare Hospital at Baptist Health Corbin.\nRachel was born in Saul, KY on Octob"
+      }
+    },
+    {
+      "source": "gutenberg",
+      "dataset": "sedthh/gutenberg_english",
+      "config": null,
+      "licence": "Public domain in the US (Project Gutenberg)",
+      "domain": "literary",
+      "scanned": 118,
+      "kept": 100,
+      "rejected": {
+        "pii_heavy": 18
+      },
+      "edits": {
+        "unwrapped": 118,
+        "pii_replaced": 1387
+      },
+      "median_doc_tokens": 59523.0,
+      "example": {
+        "raw": "{705}\r\nCHAMBERS’S JOURNAL\r\n\r\nOF\r\n\r\nPOPULAR\r\n\r\nLITERATURE, SCIENCE, AND ART.\r\n\r\nCONTENTS\r\n\r\n\r\nTHE STORY OF A VAST EXPLOSION.\r\nBY MEAD AND STREAM.\r\nCIGARS.\r\nONE WOMAN’S HISTORY.\r\nAMERICAN NEWSPAPERS ON THEMSELVES.\r\nTHE MISSING CLUE.\r\nA SOLITARY ISLAND.\r\nFORESTRY AND FARMING.\r\nA LOVE-THOUGHT.\r\n\r\n\r\nChambers’s Journal of Popular Literature, Science,\r\n\r\nand Art. Fifth Series. Established by William and ",
+        "clean": "n the Straits of Sunda. Paradoxical as it appears, the sound was sometimes better heard in distant places than in those nearer the seat of disturbance. This singular effect has been thus explained—assuming, for example, the presence of a thick cloud of ashes between Krakatoa and Anjer, this would act on the sound-waves like a thick soft cushion; along and above such an ash-cloud the sound would be"
+      }
+    },
+    {
+      "source": "imdb",
+      "dataset": "stanfordnlp/imdb",
+      "config": null,
+      "licence": "Research use (Maas et al. 2011); review copyright with authors",
+      "domain": "review",
+      "scanned": 210,
+      "kept": 100,
+      "rejected": {
+        "too_short_chars": 26,
+        "unsafe_content": 9,
+        "too_few_tokens": 75
+      },
+      "edits": {
+        "pii_replaced": 2
+      },
+      "median_doc_tokens": 313.5,
+      "example": {
+        "raw": "Fashionably fragmented, yet infuriatingly half-realized character-study, an examination of the different personalities of two college roommates: a talented but undisciplined star basketball player, and a pot-smoking, womanizing rabble-rouser. We never learn why these young men are friends. They may share confusions about the world and their places in it, but they don't seem to have anything else i",
+        "clean": "Fashionably fragmented, yet infuriatingly half-realized character-study, an examination of the different personalities of two college roommates: a talented but undisciplined star basketball player, and a pot-smoking, womanizing rabble-rouser. We never learn why these young men are friends. They may share confusions about the world and their places in it, but they don't seem to have anything else i"
+      }
+    },
+    {
+      "source": "reddit",
+      "dataset": "webis/tldr-17",
+      "config": null,
+      "licence": "CC BY 4.0 (dataset card); Reddit content policy",
+      "domain": "social",
+      "scanned": 264,
+      "kept": 100,
+      "rejected": {
+        "too_short_chars": 89,
+        "too_few_tokens": 42,
+        "unsafe_subreddit": 4,
+        "unsafe_content": 29
+      },
+      "edits": {
+        "pii_replaced": 3
+      },
+      "median_doc_tokens": 344.0,
+      "example": {
+        "raw": "I perform lung function tests on patients and frequently see addicts, many of whom have done some pretty shit things to get their next fix. Generally, I don't want to know, as it makes no difference to the level of effort I'll put into my job - and knowing something bad about a patient can make it harder to put that effort in. So far, nothing a patient has done has changed the way I'd treat them (",
+        "clean": "I perform lung function tests on patients and frequently see addicts, many of whom have done some pretty shit things to get their next fix. Generally, I don't want to know, as it makes no difference to the level of effort I'll put into my job - and knowing something bad about a patient can make it harder to put that effort in. So far, nothing a patient has done has changed the way I'd treat them ("
+      }
+    },
+    {
+      "source": "amazon",
+      "dataset": "McAuley-Lab/Amazon-Reviews-2023",
+      "config": "raw/review_categories/Electronics",
+      "licence": "Research use (McAuley Lab); no explicit licence",
+      "domain": "review",
+      "scanned": 1314,
+      "kept": 100,
+      "rejected": {
+        "too_few_tokens": 104,
+        "too_short_chars": 1110
+      },
+      "edits": {
+        "pii_replaced": 3
+      },
+      "median_doc_tokens": 285.5,
+      "example": {
+        "raw": "Fun Way to Share Pictures & Videos. The Prynt case is a fun, easy way to print pictures from your phone. This works well with my daughter's iPhone 6. She had to download an app in order to use it. The app was user friendly. My daughter enjoys making gifs and videos, so she thinks it's fun to be able to add those to her pictures. The quality of prints is okay, but not as good as what she gets with ",
+        "clean": "Fun Way to Share Pictures & Videos. The Prynt case is a fun, easy way to print pictures from your phone. This works well with my daughter's iPhone 6. She had to download an app in order to use it. The app was user friendly. My daughter enjoys making gifs and videos, so she thinks it's fun to be able to add those to her pictures. The quality of prints is okay, but not as good as what she gets with "
+      }
+    },
+    {
+      "source": "stackexchange",
+      "dataset": "HuggingFaceH4/stack-exchange-preferences",
+      "config": null,
+      "licence": "CC BY-SA 4.0 (Stack Exchange)",
+      "domain": "technical Q&A",
+      "scanned": 366,
+      "kept": 100,
+      "rejected": {
+        "too_short_chars": 213,
+        "too_few_tokens": 50,
+        "duplicate": 3
+      },
+      "edits": {
+        "code_blocks_removed": 254,
+        "pii_replaced": 37
+      },
+      "median_doc_tokens": 328.0,
+      "example": {
+        "raw": "<p>Notice the highlighted link at the top of your browser window, just above the question title and below the temporary logo.  It says <a href=\"http://blog.stackoverflow.com/2010/07/the-7-essential-meta-questions-of-every-beta/\">Take ownership of your community — Read The 7 Essential Meta Questions of Every Beta</a>.  Click on it.  Now read #1.</p>\n<p>For those too busy to click, here's what it sa",
+        "clean": "Notice the highlighted link at the top of your browser window, just above the question title and below the temporary logo. It says Take ownership of your community — Read The 7 Essential Meta Questions of Every Beta. Click on it. Now read #1.\n\nFor those too busy to click, here's what it says:\n\n1. Are questions about [subject] on or off topic?\nThe single most important design element of a new Q&A s"
+      }
+    },
+    {
+      "source": "acl_ethics",
+      "dataset": "github.com/coastalcph/EthiCon@2a4ff0d",
+      "config": "acl_22_23_data.csv",
+      "licence": "CC BY 4.0 (ACL Anthology papers since 2016); EthiCon repo states no licence",
+      "domain": "scientific",
+      "scanned": 365,
+      "kept": 100,
+      "rejected": {
+        "too_few_tokens": 111,
+        "too_short_chars": 154
+      },
+      "edits": {
+        "hyphenation_joins": 1465,
+        "pii_replaced": 29
+      },
+      "median_doc_tokens": 301.0,
+      "example": {
+        "raw": "Systems designed to influence humans via commu-\nnication constitute a highly sensitive topic due to\ntheir intrinsically social nature (Stock et al., 2016).\nAny automated sales assistant comes along with the\nethical risk of not only influencing customer opin-\nion but doing so in ways undesired by customers,\ne.g., to their financial or otherwise personal disad-\nvantage. Naturally, it is the company ",
+        "clean": "Systems designed to influence humans via communication constitute a highly sensitive topic due to their intrinsically social nature (Stock et al., 2016). Any automated sales assistant comes along with the ethical risk of not only influencing customer opinion but doing so in ways undesired by customers, e.g., to their financial or otherwise personal disadvantage. Naturally, it is the company that d"
+      }
+    },
+    {
+      "source": "python_code",
+      "dataset": "local Python standard library",
+      "config": null,
+      "licence": "Python Software Foundation License",
+      "domain": "code",
+      "scanned": 121,
+      "kept": 100,
+      "rejected": {
+        "too_few_tokens": 1,
+        "duplicate": 20
+      },
+      "edits": {},
+      "median_doc_tokens": 6808.0,
+      "example": {
+        "raw": "import math\nimport numbers\nimport random\nimport sys\n\nfrom fractions import Fraction\nfrom decimal import Decimal\nfrom itertools import count, groupby, repeat\nfrom bisect import bisect_left, bisect_right\nfrom math import hypot, sqrt, fabs, exp, erf, tau, log, fsum, sumprod\nfrom math import isfinite, isinf, pi, cos, sin, tan, cosh, asin, atan, acos\nfrom functools import reduce\nfrom operator import it",
+        "clean": "import math\nimport numbers\nimport random\nimport sys\n\nfrom fractions import Fraction\nfrom decimal import Decimal\nfrom itertools import count, groupby, repeat\nfrom bisect import bisect_left, bisect_right\nfrom math import hypot, sqrt, fabs, exp, erf, tau, log, fsum, sumprod\nfrom math import isfinite, isinf, pi, cos, sin, tan, cosh, asin, atan, acos\nfrom functools import reduce\nfrom operator import it"
+      }
+    }
+  ]
+}

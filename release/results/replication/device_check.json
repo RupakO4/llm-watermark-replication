@@ -1,0 +1,20 @@
+{
+  "devices": [
+    "cpu",
+    "cuda"
+  ],
+  "gamma": 0.5,
+  "delta": 2.0,
+  "cpu_watermarked_mean_z": 7.942240000000001,
+  "cpu_watermarked_detected": 48,
+  "cpu_watermarked_n": 50,
+  "cpu_unwatermarked_mean_z": 0.045259999999999995,
+  "cpu_unwatermarked_detected": 0,
+  "cpu_unwatermarked_n": 50,
+  "cuda_watermarked_mean_z": 0.03956000000000001,
+  "cuda_watermarked_detected": 0,
+  "cuda_watermarked_n": 50,
+  "cuda_unwatermarked_mean_z": 0.13,
+  "cuda_unwatermarked_detected": 0,
+  "cuda_unwatermarked_n": 50
+}

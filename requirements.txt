@@ -1,0 +1,13 @@
+# Experiments (tested with Python 3.10; exact versions of a run are written to results/environment.json)
+torch>=2.1
+transformers>=4.40
+datasets>=2.18
+tokenizers>=0.15
+sentencepiece>=0.1.99
+protobuf>=3.20
+scipy>=1.10
+numpy>=1.24
+# Analysis, tables and figures
+pandas>=2.0
+matplotlib>=3.7
+scikit-learn>=1.3

@@ -1,0 +1,26 @@
+{
+  "experiment": "multidomain",
+  "prompts": "data/prompts_multidomain.csv",
+  "model": "facebook/opt-1.3b",
+  "attack_model": "google-t5/t5-large",
+  "gamma": 0.5,
+  "delta": 2.0,
+  "budgets": [
+    0.1,
+    0.3,
+    0.5
+  ],
+  "num_beams": 50,
+  "k": 20,
+  "batch": 8,
+  "device": "auto",
+  "limit_per_source": 10,
+  "prefix_lengths": [
+    25,
+    50,
+    100,
+    150,
+    200
+  ],
+  "seed": 7
+}

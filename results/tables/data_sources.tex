@@ -1,0 +1,17 @@
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l l l l r r l r c@{}}
+\toprule
+Source & Register & Dataset / origin & Licence & Scanned & Kept & Main rejections & Med.\ tok. & Released \\
+\midrule
+C4 (paper corpus) & news & \texttt{allenai/c4 (realnewslike)} & ODC-BY & 136 & 100 & short 19, <200 tok. 17 & 629 & yes \\
+Wikipedia & encyclopedic & \texttt{wikimedia/wikipedia (20231101.en)} & CC BY-SA 4.0 & 175 & 100 & short 69, <200 tok. 6 & 517 & yes \\
+CC-News & news & \texttt{vblagoje/cc\_news} & publisher copyright & 139 & 100 & short 21, <200 tok. 13, dup. 3 & 546 & IDs only \\
+Gutenberg & literary & \texttt{sedthh/gutenberg\_english} & public domain & 118 & 100 & PII 18 & 59523 & yes \\
+IMDb & review & \texttt{stanfordnlp/imdb} & research use & 210 & 100 & <200 tok. 75, short 26, unsafe 9 & 314 & IDs only \\
+Reddit & social & \texttt{webis/tldr-17} & CC BY 4.0 & 264 & 100 & short 89, <200 tok. 42, unsafe 29 & 344 & yes \\
+Amazon & review & \texttt{McAuley-Lab/Amazon-Reviews-2023 (Electronics)} & research use & 1,314 & 100 & short 1110, <200 tok. 104 & 286 & IDs only \\
+StackExchange & technical Q\&A & \texttt{HuggingFaceH4/stack-exchange-preferences} & CC BY-SA 4.0 & 366 & 100 & short 213, <200 tok. 50, dup. 3 & 328 & yes \\
+ACL ethics & scientific & \texttt{coastalcph/EthiCon (GitHub)} & CC BY 4.0 & 365 & 100 & short 154, <200 tok. 111 & 301 & yes \\
+Python code & code & \texttt{CPython standard library} & PSF & 121 & 100 & dup. 20, <200 tok. 1 & 6808 & yes \\
+\bottomrule
+\end{tabular}}
